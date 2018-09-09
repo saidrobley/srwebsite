@@ -1,123 +1,363 @@
-body {
-    margin: 0;
-    padding: 0;
+/* start commented backslash hack \*/
+* html .clearfix {
+  height: 1%;
 }
-
+.clearfix {
+  display: block;
+}
+/* close commented backslash hack */
+body {
+  margin: 0;
+  padding: 0;
+  /* background-color: silver; */
+}
+nav {
+  overflow: hidden;
+}
 .navigation {
-    background-color: black;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  /*background-color: #33363F; */
+  /* background-color: #1d1e25; */
+  background-color: purple;
+
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-transform: uppercase;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  font-weight: bold;
+  overflow: hidden;
+}
+.menu {
+  height: 100%;
 }
 
 .logo {
-    display: inline-block;
-    float: left;
-    color: white;
-    margin-left: 30px;
-    padding: 15px;
+  display: inline-block;
+  color: white;
+  margin-left: 30px;
+  padding: 15px;
 }
 
 .logo:hover {
-    cursor: pointer;
+  cursor: pointer;
+  color: green;
 }
 
 .menu ul {
-    list-style: none;
-    float: right;
+  list-style: none;
+  float: right;
+  margin: 0;
+  padding: 0;
 }
 
 .menu ul li {
-    display: inline-block;
-    color: white;
-    margin: 0 30px;
-    padding: 15px 0;
+  display: inline-block;
+  color: white;
+  margin: 0 30px;
+  padding: 15px 0;
 }
 
 .menu ul li:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .menu ul li a {
-    text-decoration: none;
-    color: white;
+  text-decoration: none;
+  color: white;
+}
+
+.menu ul li a:hover {
+  color: green;
 }
 
 .mobile-menu {
-    display: none;
+  display: none;
 }
 
 .m-menu {
-    opacity: 0
+  display: none;
+}
+/*------------------ About ------------------*/
+.hero {
+  background-color: silver;
+  margin-top: 50px;
+  text-align: center;
+  background-image: url("../img/clouds.jpg");
+  background-size: cover;
+  margin: 0;
+  padding: 1px;
+  height: 400px;
+  color: white;
+  padding-top: 150px;
 }
 
+.hero h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+.hero h3 {
+  font-style: italic;
+  font-size: 2rem;
+}
+.touch {
+  margin-top: 75px;
+}
+.touch a {
+  text-decoration: none;
+  color: white;
+  background-color: #33363f;
+  border-radius: 25px;
+  padding: 15px;
+  text-transform: uppercase;
+}
+.touch a:hover {
+  background-color: purple;
+}
+/*****************About*****************/
+.about {
+  height: 500px;
+  background: #42487d;
+}
+.about h1 {
+  margin: 0;
+  text-align: center;
+  color: white;
+  padding: 30px 0;
+  text-transform: uppercase;
+}
+.content {
+  width: 90%;
+  height: 400px;
+  margin: 20px auto;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.left {
+  width: 70%;
+
+  color: white;
+  justify-self: center;
+  background: green;
+  overflow: hidden;
+}
+.left h2 {
+  margin: 0;
+  text-transform: uppercase;
+}
+.left p {
+  margin-bottom: 50px;
+}
+
+/***********************************/
+
+.middle {
+  width: 70%;
+  height: 100%;
+  justify-self: center;
+}
+.middle img {
+  height: 300px;
+  width: 100%;
+  border-radius: 50%;
+}
+.right {
+  width: 100%;
+  height: 100%;
+  color: white;
+  justify-self: center;
+}
+.right h2 {
+  margin: 0;
+}
+
+/*******************Skills*****************/
+.skill {
+  height: 100px;
+  background: blue;
+}
+.pr {
+  width: 100%;
+  /*overflow: hidden;
+  display: inline-block;
+  margin-bottom: 10px; */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.pr p {
+  margin: 0;
+  padding: 0;
+  justify-self: left;
+  width: 50%;
+}
+.pr .cont {
+  width: 100%;
+  background-color: #ddd;
+  justify-self: left;
+
+  margin: 5px;
+}
+.pr .skills {
+  text-align: right;
+  color: white;
+}
+.pr .java,
+.pr .html,
+.pr .css,
+.pr .javascript {
+  background-color: purple;
+}
+.pr .java {
+  width: 70%;
+}
+.pr .html {
+  width: 95%;
+}
+.pr .css {
+  width: 80%;
+}
+.pr .javascript {
+  width: 60%;
+}
+
+/*
+.name {
+  height: 250px;
+}
+.name h1 {
+  /*position: relative; */
+/* animation-name: name;
+  animation-duration: 6s;
+  animation-fill-mode: forwards;
+  color: white;
+  font-size: 3rem;
+  margin-top: 70px;
+}
+.description {
+  height: 250px;
+}
+.description h4 {
+  /*position: relative; */
+/* animation-name: description;
+  animation-duration: 6s;
+  animation-fill-mode: backwards;
+  color: white;
+  margin-top: 100px;
+}
+/*
+@keyframes name {
+  0% {
+    top: -13px;
+  }
+  100% {
+    top: 100px;
+  }
+}
+@keyframes description {
+  0% {
+    bottom: -230px;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+*/
+/*------------------- Skills ---------------*/
+/*@media (max-width: 882px) {
+  .left {
+    display: none;
+  }
+  .middle,
+  .right {
+    width: 49.7%;
+  }
+} */
 /*--------------- Mobile ----------------------*/
 @media (max-width: 768px) {
-    .menu {
-        display: none !important;
-    }
+  .menu {
+    display: none !important;
+  }
 
-    .mobile-menu {
-        display: block;
-    }
+  .mobile-menu {
+    display: block;
+  }
 
-    .mobile-menu:hover {
-        cursor: pointer;
-    }
+  .mobile-menu:hover {
+    cursor: pointer;
+  }
 
-    .times {
-        display: none;
-        float: right;
-        color: white;
-        margin-right: 45px;
-        font-size: 30px;
-    }
+  .times {
+    display: none;
+    float: right;
+    color: white;
+    margin-right: 45px;
+    font-size: 30px;
+  }
 
-    .hamburger {
-        display: inline-block;
-        float: right;
-        color: white;
-        margin-right: 45px;
-        font-size: 30px;
-    }
+  .hamburger {
+    display: inline-block;
+    float: right;
+    color: white;
+    margin-right: 45px;
+    font-size: 30px;
+  }
 
-    .m-menu {
-        width: 100%;
-        background-color: #333740;
-        text-align: center;
-        opacity: 1;
-    }
+  .m-menu {
+    width: 100%;
+    background-color: #333740;
+    text-align: center;
+    /* opacity: 1; */
+    font-weight: bold;
+    margin: 0;
+  }
 
-    .m-menu ul {
-        list-style: none;
-        margin: 0;
-        width: 100%;
-        padding: 0;
-    }
+  .m-menu ul {
+    list-style: none;
+    margin: 0;
+    width: 100%;
+    padding: 0;
+  }
 
-    .m-menu ul li {
-        color: white;
-        width: 100%;
-        padding: 10px;
-        border-top: 1px solid black;
-        text-transform: uppercase;
-    }
+  .m-menu ul li {
+    color: white;
+    width: 100%;
+    padding: 10px;
+    border-top: 1px solid black;
+    text-transform: uppercase;
+    background-color: #333740;
+  }
 
-    .m-menu ul li:hover {
-        background-color: black;
-    }
+  .m-menu ul li:hover {
+    background-color: black;
+  }
 
-    .m-menu ul li a {
-        color: white;
-        text-decoration: none;
-    }
+  .m-menu ul li a {
+    color: white;
+    text-decoration: none;
+  }
 
-    .hide {
-        display: none;
-    }
+  .hide {
+    opacity: 0;
+  }
 
-    .show {
-        display: block;
-    }
+  .show {
+    opacity: 1;
+    display: block;
+    margin-top: 50px;
+  }
+
+  .displayNone {
+    display: none;
+  }
+
+  .displayBlock {
+    display: block;
+  }
+  .middle,
+  .right {
+    width: 49%;
+  }
 }
